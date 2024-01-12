@@ -40,11 +40,18 @@ export FLASK_APP=core/server.py
 rm core/store.sqlite3
 flask db upgrade -d core/migrations/
 ```
-### Start Server
+### Docker
+Execute the following command to start the server in a docker container
+```
+docker compose up --build
+```
+Similarily to stop the container, execute
+```
+docker compose down
+```
+ 
+### Start the 
 
-```
-bash run.sh
-```
 ### Run Tests
 
 ```
@@ -54,3 +61,6 @@ pytest -vvv -s tests/
 # pytest --cov
 # open htmlcov/index.html
 ```
+### Screenshot
+![Screenshot](screenshot/ss.png)
+
